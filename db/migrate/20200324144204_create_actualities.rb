@@ -6,8 +6,11 @@ class CreateActualities < ActiveRecord::Migration[5.2]
       t.date :date
       t.date :start_date
       t.date :end_date
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
+
+
   end
 end

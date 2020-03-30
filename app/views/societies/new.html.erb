@@ -1,0 +1,22 @@
+<div class="background">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon m-0" id="navbar-scroll">
+    <div class="d-flex w-100 justify-content-between align-items-center">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <img src="https://image.flaticon.com/icons/png/512/36/36447.png" alt="logo">
+      <% end %>
+      <h2>Ajouter une nouvelle entreprise</h2>
+      <div class="text-black">
+        <%= link_to "Retour", societies_path %>
+      </div>
+    </div>
+  </div>
+  <div class="new-entreprise">
+    <%= simple_form_for @society do |f| %>
+    <%= f.input :name, label: "Nom de l'entreprise" %>
+    <%= f.input :address, label: "Adresse de l'entreprise" %>
+    <%= f.input :phone_number, label: "Numéro de téléphone" %>
+    <%= f.input :url, label: "Url du site de l'entreprise" %>
+    <%= f.button :submit, "Créer", class: "btn-primary" %>
+    <% end %>
+  </div>
+</div>

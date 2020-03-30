@@ -1,0 +1,49 @@
+<div class="background">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon m-0" id="navbar-scroll">
+    <div class="d-flex w-100 justify-content-between align-items-center">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <img src="https://image.flaticon.com/icons/png/512/36/36447.png" alt="logo">
+      <% end %>
+      <h2>Entreprises</h2>
+      <div class="text-black">
+        <% if user_signed_in? %>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Connexion", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% if user_signed_in? %>
+    <div class="add">
+      <%= link_to new_society_path do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="container">
+    <% @societies.each do |society| %>
+    <%= link_to society.url do %>
+        <div class="cards m-3">
+          <div class="d-flex justify-content-around">
+              <div class="card-center">
+                <h5><%= society.name %></h5>
+                <h8><%= society.address %></h8>
+                <h8><%= society.phone_number %></h8>
+              </div>
+              <% if society.image.present? %>
+                <div class="image-society">
+                  <%= image_tag society.image, height: 100 %>
+                </div>
+              <% else %>
+                <div class="image-society">
+                  <img src="https://image.flaticon.com/icons/png/512/36/36447.png" alt="Pas d'image", style="height: 100px">
+                </div>
+              <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

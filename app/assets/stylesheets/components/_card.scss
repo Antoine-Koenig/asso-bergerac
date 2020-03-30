@@ -1,0 +1,17 @@
+// .card-content {
+//   background-color: blue;
+//   display: flex;
+//   flex-direction: column;
+// }
+.card-center {
+  display: block;
+  align-self: center;
+}
+
+.cards {
+  color: blue;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  width: 100%;
+}

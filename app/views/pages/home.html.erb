@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon m-0" id="navbar-scroll">
+    <div class="d-flex w-100 justify-content-between align-items-center border-bottom border-dark">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <img src="https://image.flaticon.com/icons/png/512/36/36447.png" alt="logo">
+      <% end %>
+      <%= link_to "Entreprise", societies_path, class:"link-home" %>
+      <%= link_to "Actualités", actualities_path,  class:"link-home" %>
+
+
+
+
+
+      <div class="text-black">
+        <% if user_signed_in? %>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Connexion", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-title">
+    <h1>Bienvenue sur le site de l'Association des Commerçants de la Route de
+    Bordeaux à Bergerac</h1>
+  </div>
+  <div class="home-content">
+    <div class="content-title">
+      <h2>Qui sommes-nous ?</h2>
+    </div>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maxime cumque deserunt pariatur officiis! Corporis et rerum quia, assumenda est nostrum pariatur aliquam ad consequuntur totam, labore accusantium laboriosam maxime.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maxime cumque deserunt pariatur officiis! Corporis et rerum quia, assumenda est nostrum pariatur aliquam ad consequuntur totam, labore accusantium laboriosam maxime.</p>
+    <div class="content-title">
+      <h2>Notre objectif</h2>
+    </div>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maxime cumque deserunt pariatur officiis! Corporis et rerum quia, assumenda est nostrum pariatur aliquam ad consequuntur totam, labore accusantium laboriosam maxime.</p>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maxime cumque deserunt pariatur officiis! Corporis et rerum quia, assumenda est nostrum pariatur aliquam ad consequuntur totam, labore accusantium laboriosam maxime.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maxime cumque deserunt pariatur officiis! Corporis et rerum quia, assumenda est nostrum pariatur aliquam ad consequuntur totam, labore accusantium laboriosam maxime.</p>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.background {
+  background: linear-gradient(#a8c2ff, #fcfcfc);
+  height: 100vh;
+}
+
+.home-title {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.home-content {
+  text-align: justify;
+  padding: 10px 25px;
+}
+
+.content-title {
+  padding-top: 15px;
+}
+
+// .link-home {
+//   background-color: black;
+//   text-decoration: none;
+//   color: white;
+//   padding: 16px 20px;
+//   border-radius: 8px;
+//   width: 225px;
+//   text-align: center;
+//   margin: 32px 32px;
+
+//   &:hover {
+//     background-color: #a8c2ff;
+//     text-decoration: none;
+//     color: black;
+//     border: solid 1px black;
+//     transition: 0.2s;
+//   }
+// }
+
+a:hover {
+  text-decoration: none;
+}
+
+.link-home p {
+  margin-bottom: 0;
+}
+
+.link-home {
+  color: black;
+}
+
+
